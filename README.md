@@ -12,8 +12,8 @@
 
 
 ## 🌐 Demo
-- **Deployed Link:** - [https://360-ghar-assignment-omega.vercel.app/](https://360-ghar-assignment-omega.vercel.app/)
-- **Loom Video Link:** - [https://www.loom.com/share/8090f4590a564a22a6a1f175e0b6d201](https://www.loom.com/share/8090f4590a564a22a6a1f175e0b6d201)
+- **Deployed Link:** - [https://360-ghar-assignment.vercel.app/](https://360-ghar-assignment.vercel.app/)
+- **Loom Video Link:** - [Insert Loom Video Link Here]
 
 ---
 
@@ -92,8 +92,8 @@ src/
 ## 🛠️ Setup & Installation
 
 ```bash
-git clone https://github.com/avnii-goel/360Ghar-Assignment.git
-cd 360Ghar
+git clone https://github.com/ShouryaAgrawal0007/360-Ghar-Assignment.git
+cd 360-Ghar-Assignment
 npm install
 cp .env.example .env
 ```
