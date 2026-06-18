@@ -6,6 +6,15 @@ Welcome to **360° Ghar**, a next-generation real estate matching platform built
 [![Vite](https://img.shields.io/badge/Vite_8-B73BFE?style=flat-square&logo=vite&logoColor=FFD62E)](#)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS_4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](#)
 [![OpenRouter](https://img.shields.io/badge/OpenRouter_AI-000000?style=flat-square&logo=openai&logoColor=white)](#)
+[![Loom Demo](https://img.shields.io/badge/Loom_Demo-Video-blue?style=flat-square&logo=loom&logoColor=white)](https://www.loom.com/share/dce801e2060f4577ba54f6444b8b6621)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ShouryaAgrawal0007/360-Ghar-Assignment.git)
+
+---
+
+## 🔗 Project Links
+
+* 📹 **Loom Demo Video**: [Watch the walkthrough video](https://www.loom.com/share/dce801e2060f4577ba54f6444b8b6621) to see all key features (Voice Search, AI Concierge, Matrix Comparison, and Grid/List switcher layouts) in action!
+* 💻 **GitHub Repository**: [ShouryaAgrawal0007/360-Ghar-Assignment](https://github.com/ShouryaAgrawal0007/360-Ghar-Assignment.git)
 
 ---
 
