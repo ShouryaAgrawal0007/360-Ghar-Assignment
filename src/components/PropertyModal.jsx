@@ -81,12 +81,12 @@ export default function PropertyModal({
       />
       
       {/* Modal Card */}
-      <div className="bg-white dark:bg-[#120b09] w-full sm:w-[92vw] md:max-w-5xl sm:rounded-3xl rounded-t-3xl shadow-2xl relative z-10 sm:animate-[modalScale_0.35s_cubic-bezier(0.16,1,0.3,1)] animate-[fade-in_0.35s_cubic-bezier(0.16,1,0.3,1)] flex flex-col md:flex-row sm:max-h-[90vh] max-h-[95vh] overflow-y-auto md:my-8 mx-auto border border-slate-200/80 dark:border-slate-850">
+      <div className="bg-white dark:bg-[#0e131f] w-full sm:w-[92vw] md:max-w-5xl sm:rounded-3xl rounded-t-3xl shadow-2xl relative z-10 sm:animate-[modalScale_0.35s_cubic-bezier(0.16,1,0.3,1)] animate-[fade-in_0.35s_cubic-bezier(0.16,1,0.3,1)] flex flex-col md:flex-row sm:max-h-[90vh] max-h-[95vh] overflow-y-auto md:my-8 mx-auto border border-slate-200/80 dark:border-slate-800/80">
         
         {/* Close Button */}
         <button 
           onClick={onClose}
-          className="absolute top-4 right-4 z-20 bg-black/55 hover:bg-black/80 text-white rounded-full p-2.5 backdrop-blur-md transition-all focus:outline-none focus:ring-2 focus:ring-orange-500/50 hover:scale-105 cursor-pointer shadow-md"
+          className="absolute top-4 right-4 z-20 bg-black/55 hover:bg-black/80 text-white rounded-full p-2.5 backdrop-blur-md transition-all focus:outline-none focus:ring-2 focus:ring-teal-500/50 hover:scale-105 cursor-pointer shadow-md"
         >
           <X className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
@@ -123,7 +123,7 @@ export default function PropertyModal({
                   <button 
                     key={idx} 
                     onClick={() => setCurrentImageIndex(idx)}
-                    className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentImageIndex ? 'bg-orange-500 w-5 shadow-[0_0_8px_rgba(249,115,22,0.6)]' : 'bg-white/60 w-1.5'} cursor-pointer`}
+                    className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentImageIndex ? 'bg-teal-500 w-5 shadow-[0_0_8px_rgba(13,148,136,0.6)]' : 'bg-white/60 w-1.5'} cursor-pointer`}
                     aria-label={`Go to slide ${idx + 1}`}
                   />
                 ))}
@@ -133,32 +133,32 @@ export default function PropertyModal({
             {/* Property Details */}
             <div className="p-6 sm:p-8 flex-shrink-0 space-y-6">
               <div>
-                <h2 className="font-playfair font-black text-2xl sm:text-3xl text-slate-850 dark:text-slate-100 leading-tight">
+                <h2 className="font-playfair font-black text-2xl sm:text-3xl text-slate-800 dark:text-slate-100 leading-tight">
                   {property.title}
                 </h2>
                 <div className="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 mt-2.5 font-medium">
-                  <MapPin className="w-4 h-4 text-orange-500" />
+                  <MapPin className="w-4 h-4 text-teal-600" />
                   <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300">{property.sector}, Gurgaon</span>
                 </div>
               </div>
 
               {/* Info Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 bg-slate-50 dark:bg-[#1b120f]/50 rounded-2xl p-5 border border-slate-200/50 dark:border-slate-850">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 bg-slate-50 dark:bg-[#111827]/50 rounded-2xl p-5 border border-slate-200/50 dark:border-slate-800/80">
                 <div className="flex flex-col">
-                  <span className="text-slate-450 dark:text-slate-500 text-[10px] uppercase font-bold tracking-widest mb-1.5 flex items-center gap-1.5"><Building2 className="w-3.5 h-3.5 text-orange-500" /> Layout</span>
-                  <span className="font-extrabold text-slate-850 dark:text-white text-sm sm:text-base">{property.bhk} BHK</span>
+                  <span className="text-slate-400 dark:text-slate-500 text-[10px] uppercase font-bold tracking-widest mb-1.5 flex items-center gap-1.5"><Building2 className="w-3.5 h-3.5 text-teal-600" /> Layout</span>
+                  <span className="font-extrabold text-slate-800 dark:text-white text-sm sm:text-base">{property.bhk} BHK</span>
                 </div>
                 <div className="flex flex-col border-l border-slate-200 dark:border-slate-800 pl-4 sm:border-l-0 sm:pl-0">
-                  <span className="text-slate-450 dark:text-slate-500 text-[10px] uppercase font-bold tracking-widest mb-1.5 flex items-center gap-1.5"><Ruler className="w-3.5 h-3.5 text-orange-500" /> Size</span>
-                  <span className="font-extrabold text-slate-850 dark:text-white text-sm sm:text-base">{property.area} <span className="text-[10px] font-semibold text-slate-550">sq ft</span></span>
+                  <span className="text-slate-400 dark:text-slate-500 text-[10px] uppercase font-bold tracking-widest mb-1.5 flex items-center gap-1.5"><Ruler className="w-3.5 h-3.5 text-teal-600" /> Size</span>
+                  <span className="font-extrabold text-slate-800 dark:text-white text-sm sm:text-base">{property.area} <span className="text-[10px] font-semibold text-slate-500">sq ft</span></span>
                 </div>
                 <div className="flex flex-col border-t sm:border-t-0 sm:border-l border-slate-200 dark:border-slate-800 pt-4 sm:pt-0 sm:pl-4">
-                  <span className="text-slate-450 dark:text-slate-500 text-[10px] uppercase font-bold tracking-widest mb-1.5 flex items-center gap-1.5"><Grid className="w-3.5 h-3.5 text-orange-500" /> Floor</span>
-                  <span className="font-extrabold text-slate-850 dark:text-white text-sm sm:text-base">{property.floor} <span className="text-[10px] font-semibold text-slate-555">/ {property.totalFloors}</span></span>
+                  <span className="text-slate-400 dark:text-slate-500 text-[10px] uppercase font-bold tracking-widest mb-1.5 flex items-center gap-1.5"><Grid className="w-3.5 h-3.5 text-teal-600" /> Floor</span>
+                  <span className="font-extrabold text-slate-800 dark:text-white text-sm sm:text-base">{property.floor} <span className="text-[10px] font-semibold text-slate-500">/ {property.totalFloors}</span></span>
                 </div>
                 <div className="flex flex-col border-t sm:border-t-0 border-l border-slate-200 dark:border-slate-800 pt-4 sm:pt-0 pl-4">
-                  <span className="text-slate-450 dark:text-slate-500 text-[10px] uppercase font-bold tracking-widest mb-1.5 flex items-center gap-1.5"><Compass className="w-3.5 h-3.5 text-orange-500" /> Facing</span>
-                  <span className="font-extrabold text-slate-850 dark:text-white text-sm sm:text-base">{property.facing}</span>
+                  <span className="text-slate-400 dark:text-slate-500 text-[10px] uppercase font-bold tracking-widest mb-1.5 flex items-center gap-1.5"><Compass className="w-3.5 h-3.5 text-teal-600" /> Facing</span>
+                  <span className="font-extrabold text-slate-800 dark:text-white text-sm sm:text-base">{property.facing}</span>
                 </div>
               </div>
 
@@ -171,7 +171,7 @@ export default function PropertyModal({
                       const Icon = AMENITY_ICONS[amenity] || Sparkles;
                       return (
                         <div key={idx} className="flex items-center gap-3 text-slate-700 dark:text-slate-300">
-                          <div className="bg-orange-500/10 dark:bg-orange-500/15 p-2 rounded-xl text-orange-500 dark:text-orange-400 shadow-sm border border-orange-500/10">
+                          <div className="bg-teal-500/10 dark:bg-teal-500/15 p-2 rounded-xl text-teal-600 dark:text-teal-400 shadow-sm border border-teal-500/10">
                             <Icon className="w-4 h-4" />
                           </div>
                           <span className="text-xs sm:text-sm font-semibold capitalize">{amenity.replace('_', ' ')}</span>
@@ -185,27 +185,27 @@ export default function PropertyModal({
           </div>
 
           {/* RIGHT COLUMN (40%) */}
-          <div className="w-full md:w-[40%] bg-slate-50/70 dark:bg-[#1b120f]/30 border-t md:border-t-0 md:border-l border-slate-200 dark:border-slate-850 p-6 sm:p-8 flex flex-col shrink-0 justify-between">
+          <div className="w-full md:w-[40%] bg-slate-50/70 dark:bg-[#0e131f]/30 border-t md:border-t-0 md:border-l border-slate-200 dark:border-slate-800/80 p-6 sm:p-8 flex flex-col shrink-0 justify-between">
             <div className="space-y-6">
               {/* Price block */}
               <div>
-                <div className="text-[10px] text-slate-450 dark:text-slate-500 font-bold uppercase tracking-widest mb-1.5">Value Assessment</div>
+                <div className="text-[10px] text-slate-400 dark:text-slate-500 font-bold uppercase tracking-widest mb-1.5">Value Assessment</div>
                 <div className="flex items-baseline gap-2.5">
                   <span className="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight">{property.priceLabel}</span>
                   <span className="text-[9px] font-extrabold text-emerald-600 dark:text-emerald-400 uppercase bg-emerald-500/10 dark:bg-emerald-500/15 px-2 py-0.5 rounded border border-emerald-500/20 shadow-sm">Verified Value</span>
                 </div>
-                <div className="text-xs font-semibold text-slate-500 dark:text-slate-450 mt-2">~ ₹{pricePerSqFt.toLocaleString('en-IN')} per sq.ft</div>
+                <div className="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-2">~ ₹{pricePerSqFt.toLocaleString('en-IN')} per sq.ft</div>
               </div>
 
               {/* AI Concierge Summary Block */}
               <div className="space-y-3.5">
                 <h3 className="flex items-center gap-2 font-bold text-xs sm:text-sm text-slate-900 dark:text-white uppercase tracking-wider">
-                  <Sparkles className="w-4.5 h-4.5 text-orange-500 animate-pulse" />
+                  <Sparkles className="w-4.5 h-4.5 text-teal-600 animate-pulse" />
                   AI Suitability Advisory
                 </h3>
                 
-                <div className="bg-white dark:bg-[#18110f]/90 border border-slate-200/50 dark:border-slate-850 border-l-4 border-l-orange-500 shadow-sm rounded-r-2xl p-5 relative overflow-hidden">
-                  <div className="text-5xl text-orange-500/10 absolute top-1 left-2 font-serif leading-none select-none pointer-events-none">“</div>
+                <div className="bg-white dark:bg-[#0e131f]/90 border border-slate-200/50 dark:border-slate-800/80 border-l-4 border-l-teal-600 shadow-sm rounded-r-2xl p-5 relative overflow-hidden">
+                  <div className="text-5xl text-teal-600/10 absolute top-1 left-2 font-serif leading-none select-none pointer-events-none">“</div>
                   
                   {summaryLoading ? (
                     <div className="space-y-2.5 animate-pulse pt-2.5">
@@ -222,7 +222,7 @@ export default function PropertyModal({
               </div>
 
               {/* Appreciation Potential */}
-              <div className="flex items-center gap-2 bg-teal-500/10 dark:bg-teal-500/15 text-teal-650 dark:text-teal-400 border border-teal-500/20 py-3 px-4 rounded-2xl text-center text-xs font-bold tracking-wide uppercase select-none shadow-sm">
+              <div className="flex items-center gap-2 bg-teal-500/10 dark:bg-teal-500/15 text-teal-600 dark:text-teal-400 border border-teal-500/20 py-3 px-4 rounded-2xl text-center text-xs font-bold tracking-wide uppercase select-none shadow-sm">
                 <TrendingUp className="w-4.5 h-4.5 text-teal-500" />
                 <span>Excellent Appreciation Rating (+12% Sector)</span>
               </div>
@@ -230,24 +230,24 @@ export default function PropertyModal({
 
             {/* CTA Buttons */}
             <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-800 space-y-4">
-              <button className="w-full bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-orange-500/10 hover:shadow-orange-500/25 transition-all duration-300 cursor-pointer active:scale-[0.98] text-xs sm:text-sm flex items-center justify-center gap-2">
+              <button className="w-full bg-gradient-to-r from-teal-650 to-indigo-600 hover:from-teal-700 hover:to-indigo-700 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-teal-500/10 hover:shadow-teal-500/25 transition-all duration-300 cursor-pointer active:scale-[0.98] text-xs sm:text-sm flex items-center justify-center gap-2">
                 <Calendar className="w-4 h-4" />
                 <span>Schedule a 360° VR Tour</span>
               </button>
               
               <button 
                 onClick={handleCopyLink}
-                className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-850 hover:border-slate-350 dark:hover:border-slate-750 hover:bg-slate-50 dark:hover:bg-slate-850/50 text-slate-700 dark:text-slate-300 font-bold py-3 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 active:scale-[0.98] text-xs sm:text-sm cursor-pointer shadow-sm"
+                className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/50 text-slate-700 dark:text-slate-300 font-bold py-3 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 active:scale-[0.98] text-xs sm:text-sm cursor-pointer shadow-sm"
               >
                 <Share2 className="w-4 h-4" />
                 <span>Share Property link</span>
               </button>
 
               {/* Action row (Heart, Copy, Flag) */}
-              <div className="flex items-center justify-center gap-6 pt-3.5 text-slate-400 dark:text-slate-650">
+              <div className="flex items-center justify-center gap-6 pt-3.5 text-slate-400 dark:text-slate-500">
                 <button 
                   onClick={() => setLiked(!liked)} 
-                  className={`hover:text-red-500 transition-colors cursor-pointer p-1.5 hover:bg-slate-100 dark:hover:bg-slate-850 rounded-full ${liked ? 'text-red-505 fill-red-550 scale-110' : ''}`}
+                  className={`hover:text-red-500 transition-colors cursor-pointer p-1.5 hover:bg-slate-100 dark:hover:bg-slate-850 rounded-full ${liked ? 'text-red-500 fill-red-500 scale-110' : ''}`}
                   title="Save Property"
                 >
                   <Heart className="w-4.5 h-4.5" />
@@ -270,7 +270,7 @@ export default function PropertyModal({
               {/* Copy success toast */}
               <div className="h-4">
                 {toastMessage && (
-                  <div className="text-center text-[11px] font-bold text-green-600 dark:text-green-450 animate-fade-in">
+                  <div className="text-center text-[11px] font-bold text-emerald-600 dark:text-emerald-400 animate-fade-in">
                     {toastMessage}
                   </div>
                 )}

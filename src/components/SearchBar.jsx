@@ -134,20 +134,20 @@ export default function SearchBar({
 
     return (
       <div className={`flex flex-wrap items-center ${isCompact ? 'gap-1.5 mt-3' : 'gap-2 mt-5'}`}>
-        <span className="text-[10px] uppercase font-bold tracking-widest text-slate-450 dark:text-slate-500 mr-1 flex items-center gap-1">
-          <Sparkles className="w-3 h-3 text-orange-500" /> Active Filters:
+        <span className="text-[10px] uppercase font-bold tracking-widest text-slate-455 dark:text-slate-500 mr-1 flex items-center gap-1">
+          <Sparkles className="w-3 h-3 text-teal-600" /> Active Filters:
         </span>
         {pills.map(pill => (
           <div 
             key={pill.id} 
-            className={`inline-flex items-center gap-1.5 bg-orange-500/10 dark:bg-orange-500/15 text-orange-600 dark:text-orange-400 rounded-full font-bold border border-orange-500/20 dark:border-orange-500/30 shadow-sm transition-all duration-300 hover:scale-105 ${
+            className={`inline-flex items-center gap-1.5 bg-teal-500/10 dark:bg-teal-500/15 text-teal-650 dark:text-teal-400 rounded-full font-bold border border-teal-500/20 dark:border-teal-500/30 shadow-sm transition-all duration-300 hover:scale-105 ${
               isCompact ? 'px-2.5 py-0.5 text-[11px]' : 'px-3.5 py-1 text-xs sm:text-sm'
             }`}
           >
             <span className="capitalize">{pill.label}</span>
             <button 
               onClick={() => onRemoveFilter && onRemoveFilter(pill.type, pill.value)}
-              className="hover:text-orange-850 dark:hover:text-orange-300 hover:bg-orange-500/10 dark:hover:bg-orange-500/20 p-0.5 rounded-full transition-colors focus:outline-none cursor-pointer"
+              className="hover:text-teal-850 dark:hover:text-teal-300 hover:bg-teal-500/10 dark:hover:bg-teal-500/20 p-0.5 rounded-full transition-colors focus:outline-none cursor-pointer"
             >
               <X className="w-3 h-3" />
             </button>
@@ -162,21 +162,21 @@ export default function SearchBar({
       className={`w-full relative overflow-hidden transition-all duration-500 
         ${isCompact 
           ? 'bg-transparent border-0 p-0' 
-          : 'bg-white/60 dark:bg-[#18110f]/60 backdrop-blur-xl border border-slate-200/50 dark:border-slate-800/40 rounded-3xl p-5 sm:p-7 shadow-2xl hover:shadow-[0_20px_50px_rgba(249,115,22,0.08)] dark:hover:shadow-[0_20px_50px_rgba(249,115,22,0.15)]'
+          : 'bg-white/60 dark:bg-[#0e131f]/60 backdrop-blur-xl border border-slate-200/50 dark:border-slate-800/40 rounded-3xl p-5 sm:p-7 shadow-2xl hover:shadow-[0_20px_50px_rgba(13,148,136,0.08)] dark:hover:shadow-[0_20px_50px_rgba(99,102,241,0.15)]'
         }`}
     >
       {/* Decorative gradient orbs for luxury ambient glow */}
       {!isCompact && (
         <>
-          <div className="absolute -top-32 -right-32 w-64 h-64 bg-orange-500/15 rounded-full blur-3xl pointer-events-none"></div>
-          <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div className="absolute -top-32 -right-32 w-64 h-64 bg-teal-500/15 rounded-full blur-3xl pointer-events-none"></div>
+          <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
         </>
       )}
       
       <div className={`relative z-10 flex flex-col sm:flex-row items-stretch sm:items-center ${isCompact ? 'gap-2.5' : 'gap-3.5'}`}>
         <div 
-          className={`relative flex-1 w-full bg-slate-50 dark:bg-[#120b09]/80 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 
-            focus-within:border-orange-500/50 focus-within:ring-2 focus-within:ring-orange-500/10 dark:focus-within:ring-orange-500/20 
+          className={`relative flex-1 w-full bg-slate-50 dark:bg-[#0c0f19]/80 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 
+            focus-within:border-teal-500/50 focus-within:ring-2 focus-within:ring-teal-500/10 dark:focus-within:ring-teal-500/20 
             transition-all duration-300 flex items-center shadow-inner overflow-hidden`}
         >
           {isCompact ? (
@@ -210,7 +210,7 @@ export default function SearchBar({
               ${isCompact ? 'p-2' : 'p-3'}
               ${isListening 
                 ? 'bg-red-500 text-white animate-pulse shadow-[0_0_15px_rgba(239,68,68,0.5)] scale-110' 
-                : 'text-slate-400 hover:text-orange-500 hover:bg-slate-150 dark:hover:bg-slate-850 hover:scale-105'
+                : 'text-slate-400 hover:text-teal-650 hover:bg-slate-150 dark:hover:bg-slate-850 hover:scale-105'
               }`}
             title="Search with Voice"
           >
@@ -222,7 +222,7 @@ export default function SearchBar({
         <button
           onClick={() => query.trim() && !isParsing && onSearch(query)}
           disabled={!query.trim() || isParsing}
-          className={`w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 active:scale-95 disabled:from-slate-200 disabled:to-slate-200 dark:disabled:from-slate-900 dark:disabled:to-slate-900 disabled:text-slate-400 dark:disabled:text-slate-600 text-white rounded-2xl font-bold shadow-md shadow-orange-500/10 hover:shadow-orange-500/25 dark:hover:shadow-orange-500/35 transition-all duration-300 flex-shrink-0 cursor-pointer ${
+          className={`w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r from-teal-600 to-indigo-600 hover:from-teal-700 hover:to-indigo-700 active:scale-95 disabled:from-slate-200 disabled:to-slate-200 dark:disabled:from-slate-900 dark:disabled:to-slate-900 disabled:text-slate-400 dark:disabled:text-slate-650 text-white rounded-2xl font-bold shadow-md shadow-teal-500/10 hover:shadow-teal-500/25 dark:hover:shadow-teal-500/35 transition-all duration-300 flex-shrink-0 cursor-pointer ${
             isCompact ? 'px-5 h-[44px] text-[14px]' : 'px-8 py-4 sm:py-5 text-base'
           }`}
         >
